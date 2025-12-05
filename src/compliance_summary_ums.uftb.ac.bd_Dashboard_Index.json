@@ -1,0 +1,158 @@
+{
+  "url": "https://ums.uftb.ac.bd/Dashboard/Index",
+  "checks": {
+    "https": {
+      "ok": true,
+      "msg": "HTTPS enabled"
+    },
+    "forms": {
+      "ok": true,
+      "msg": "2 form(s) detected — password fields: 1, csrf tokens: 0, insecure actions: 0",
+      "meta": {
+        "forms_count": 2,
+        "password_fields": 1,
+        "csrf_tokens": 0,
+        "form_actions_insecure": 0
+      }
+    },
+    "privacy_policy": {
+      "ok": false,
+      "msg": "⚠ Privacy policy link NOT found"
+    },
+    "consent": {
+      "ok": false,
+      "msg": "⚠ Consent checkbox NOT found"
+    },
+    "security_headers": {
+      "ok": false,
+      "msg": "Missing headers: CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy, Permissions-Policy",
+      "meta": {
+        "found": {},
+        "missing": [
+          "CSP",
+          "HSTS",
+          "X-Frame-Options",
+          "X-Content-Type-Options",
+          "Referrer-Policy",
+          "Permissions-Policy"
+        ]
+      }
+    },
+    "cookies": {
+      "ok": false,
+      "msg": "1 cookie(s) detected, 1 cookie(s) missing Secure/HttpOnly",
+      "meta": {
+        "cookies": [
+          {
+            "cookie": "ASP.NET_SessionId=vwfltqcdi2bmsom2jmtfgcza",
+            "flags": {
+              "HttpOnly": true,
+              "Secure": false,
+              "SameSite": "Lax"
+            }
+          }
+        ],
+        "insecure_count": 1
+      }
+    },
+    "trackers": {
+      "ok": false,
+      "msg": "No common trackers auto-detected",
+      "meta": {
+        "trackers": []
+      }
+    }
+  },
+  "issues": [
+    "Missing CSRF Token",
+    "Privacy policy missing",
+    "Consent checkbox missing",
+    "Missing Security Header",
+    "Insecure Cookies"
+  ],
+  "recommendations": [
+    "Implement anti-CSRF tokens for form submissions.",
+    "Add a publicly accessible privacy policy detailing data collection and processing.",
+    "Add explicit consent checkbox for data collection with proper labeling.",
+    "Add recommended security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy).",
+    "Set cookies with Secure, HttpOnly and SameSite attributes where appropriate."
+  ],
+  "laws": [
+    "COPPA",
+    "CCPA",
+    "PDPA",
+    "GDPR",
+    "Bangladesh Data Protection Act 2023",
+    "ISO 27001"
+  ],
+  "details": {},
+  "risk": {
+    "breakdown": [
+      {
+        "issue": "Missing CSRF Token",
+        "likelihood": 4,
+        "impact": 3,
+        "score": 12,
+        "laws": [
+          "ISO 27001",
+          "GDPR"
+        ],
+        "recommendation": "Implement anti-CSRF tokens for form submissions."
+      },
+      {
+        "issue": "Privacy policy missing",
+        "likelihood": 3,
+        "impact": 3,
+        "score": 9,
+        "laws": [
+          "GDPR",
+          "CCPA",
+          "PDPA",
+          "Bangladesh Data Protection Act 2023"
+        ],
+        "recommendation": "Add a publicly accessible privacy policy detailing data collection and processing."
+      },
+      {
+        "issue": "Consent checkbox missing",
+        "likelihood": 3,
+        "impact": 2,
+        "score": 6,
+        "laws": [
+          "GDPR",
+          "CCPA",
+          "PDPA",
+          "COPPA"
+        ],
+        "recommendation": "Add explicit consent checkbox for data collection with proper labeling."
+      },
+      {
+        "issue": "Missing Security Header",
+        "likelihood": 3,
+        "impact": 3,
+        "score": 9,
+        "laws": [
+          "ISO 27001",
+          "GDPR"
+        ],
+        "recommendation": "Add recommended security headers (CSP, HSTS, X-Frame-Options, X-Content-Type-Options, Referrer-Policy)."
+      },
+      {
+        "issue": "Insecure Cookies",
+        "likelihood": 3,
+        "impact": 3,
+        "score": 9,
+        "laws": [
+          "GDPR",
+          "PDPA"
+        ],
+        "recommendation": "Set cookies with Secure, HttpOnly and SameSite attributes where appropriate."
+      }
+    ],
+    "raw_total": 45,
+    "max_total": 125,
+    "percent": 0.36,
+    "normalized_score": 9,
+    "level": "MEDIUM",
+    "level_color": "\u001b[1;33m"
+  }
+}
