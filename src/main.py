@@ -6,10 +6,16 @@ from scanner import (
 import os
 
 def print_header():
-    print("\033[1;35m██████████████████████████████████████████████\033[0m")
-    print("\033[1;92m     WEBFORM PRIVACY COMPLIANCE CHECKER      \033[0m")
-    print("\033[1;35m██████████████████████████████████████████████\033[0m")
-    print("\033[1;94m                     v1.0                     \033[0m\n")
+    print("""
+\033[1;35m██████████████████████████████████████████████\033[0m
+\033[1;92m     WEBFORM PRIVACY COMPLIANCE CHECKER     \033[0m
+\033[1;35m██████████████████████████████████████████████\033[0m
+
+\033[1;96mVersion : v1.0\033[0m
+\033[1;96mAuthor  : Nodi Sadia\033[0m
+\033[1;96mGitHub  : https://github.com/nodisadia/Webform-privacy-compliance-checker\033[0m
+\033[1;96mLicense : MIT\033[0m
+""")
 
 def get_urls_from_user():
     print(WHITE + "Enter website URLs to scan (multiple allowed)." + RESET)
