@@ -36,6 +36,18 @@ A **privacy & security scanner for web forms**. This tool checks web forms for H
 git clone git@github.com:nodisadia/Webform-privacy-compliance-checker.git
 cd Webform-privacy-compliance-checker
 ```
+Install venv:
+```bash
+sudo apt install python3-venv -y
+```
+Create a virtual environment:
+```bash
+python3 -m venv venv
+```
+Activate it:
+```bash
+source venv/bin/activate
+```
 Install dependencies:
 
 ```bash
@@ -83,4 +95,5 @@ Contributions are welcome! Please fork the repo and create a pull request with y
 
 License
 This project is licensed under the MIT License.
+
 
